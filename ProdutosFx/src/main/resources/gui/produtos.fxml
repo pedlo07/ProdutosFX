@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.senac.produtosfx.controller.ProdutosController"
+            prefHeight="680.0" prefWidth="740.0"
+            maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity">
+    <children>
+        <VBox layoutX="16.0" layoutY="26.0"
+              prefHeight="442.0" prefWidth="615.0" spacing="40.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER"
+                       prefHeight="16.0" prefWidth="611.0"
+                       text="Tabela Produtos">
+                    <font>
+                        <Font size="45.0"/>
+                    </font>
+                </Label>
+
+                <TableView fx:id="tblprodutos" prefHeight="380.0" prefWidth="680.0">
+                    <columns>
+                        <TableColumn fx:id="clProd" prefWidth="200.0" text="Produto"/>
+                        <TableColumn fx:id="clTipo" prefWidth="200.0" text="Tipo de Produto"/>
+                        <TableColumn fx:id="clEntra" prefWidth="200.0" text="Valor de Entrada"/>
+                        <TableColumn fx:id="clSaida" prefWidth="200.0" text="Valor de Saida"/>
+                    </columns>
+                </TableView>
+
+
+                <HBox spacing="20.0">
+                    <children>
+                        <TextField fx:id="txtProduto" promptText="Produto" />
+                        <TextField fx:id="txtTipo" promptText="Tipo"/>
+                        <TextField fx:id="vlrEntrada" promptText="Entrada"/>
+                        <TextField fx:id="vlrSaida" promptText="Saída"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="btnSalvar" mnemonicParsing="false"
+                                onAction="#salvar" text="Salvar"/>
+                        <Button fx:id="btnAtualizar" mnemonicParsing="false"
+                                onAction="#atualizar" text="Atualizar"/>
+                        <Button fx:id="btnLimpar" mnemonicParsing="false"
+                                onAction="#limpar" text="Limpar"/>
+                        <Button fx:id="btnApagar" mnemonicParsing="false"
+                                onAction="#apagar" text="Apagar"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>
